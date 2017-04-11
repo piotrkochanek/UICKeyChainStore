@@ -1109,11 +1109,11 @@ static NSString *_defaultService;
     
     if (itemClass == kSecClassGenericPassword) {
         query[(__bridge __strong id)(kSecAttrService)] = _service;
-#if !TARGET_OS_SIMULATOR
+//#if !TARGET_OS_SIMULATOR
         if (_accessGroup) {
             query[(__bridge __strong id)kSecAttrAccessGroup] = _accessGroup;
         }
-#endif
+//#endif
     } else {
         if (_server.host) {
             query[(__bridge __strong id)kSecAttrServer] = _server.host;
